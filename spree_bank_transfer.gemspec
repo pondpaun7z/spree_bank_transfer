@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'spree/bank_transfer/version'
+require 'spree_bank_transfer/version'
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
