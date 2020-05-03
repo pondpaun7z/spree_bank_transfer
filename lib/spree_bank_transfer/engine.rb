@@ -1,7 +1,7 @@
 module SpreeBankTransfer
   class Engine < Rails::Engine
     require 'spree/core'
-    isolate_namespace Spree
+    isolate_namespace SpreeBankTransfer
     engine_name 'spree_bank_transfer'
 
     config.autoload_paths += %W(#{config.root}/lib)
@@ -17,7 +17,7 @@ module SpreeBankTransfer
       end
     end
 
-    initializer "spree.gateway.payment_methods", :after => "spree.register.payment_methods" do |app|
+    initializer "spree.spree_bank_transfer.payment_methods", :after => "spree.register.payment_methods" do |app|
       app.config.spree.payment_methods << Spree::PaymentMethod::BankTransfer
     end
 
