@@ -5,7 +5,6 @@ spree_version = 'master'
 gem 'spree', github: 'spree/spree', branch: spree_version
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: spree_version
 
-gem 'jquery-ui-rails'
 gem 'coffee-rails', '~> 5.0.0'
 gem "sass-rails", '~> 6.0.0'
 
