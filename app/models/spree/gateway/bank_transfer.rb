@@ -1,6 +1,10 @@
 module Spree
   class Gateway::BankTransfer < Gateway
 
+    def provider_class
+      ActiveMerchant::Billing::Response
+    end
+
     def actions
       %w{capture void}
     end
