@@ -24,7 +24,7 @@ describe Spree::Payment, type: :model do
       check_payment_method.name = "Check Payment Method"
       check_payment_method.save!
 
-      bank_transfer_payment_method = Spree::PaymentMethod::BankTransfer.new
+      bank_transfer_payment_method = Spree::Gateway::BankTransfer.new
       bank_transfer_payment_method.name = "Bank Transfer"
       bank_transfer_payment_method.save!
 

@@ -31,26 +31,26 @@ bundle
 bundle exec rails g spree_bank_transfer:install
 ```
 
-How it works: 
+How it works:
 ---
 
 * To add Bank Transfer feature, Admin needs to add “Bank Transfer” payment method:
 
    Configuration -> Payment Methods -> New payment Method
-   
-   You need to select “Spree::PaymentMethod::BankTransfer” as the Provider
-   
+
+   You need to select “Spree::Gateway::BankTransfer” as the Provider
+
       ![Bank Transfer - Payment Method](https://s3.amazonaws.com/gems-and-extensions-screenshots/Bank+Transfer/Bank-Transfer-Payment-Method.png)
 
 * Add bank account information from “Banks” link on “Configuration” page.
-  
+
   - Provide Name of the bank
   - Provide Account number
-  - Select “Status” check box 
+  - Select “Status” check box
   - Provide “Additional Details”, like “Branch Name”, “Bank code” etc.
 
     ![Listing Banks](http://vinsol.com/gems_screenshots/spree-bank-transfer/listing%20banks.png)
-    
+
     **Bank Account will be visible on Checkout Page only if it is Active.**
 * After adding the payment method and bank details (as stated above), this payment method will be visible on Checkout page while making payment against an order.
 
@@ -60,19 +60,19 @@ How it works:
 
 **“How Bank  Transfer Works” link will open a pop-up window. It will list all steps to complete order with this method.**
 
-* Customer will be able to order by completing the order with this method and can transfer money equal to total order   
+* Customer will be able to order by completing the order with this method and can transfer money equal to total order
   value directly into any one of the merchant’s bank account.
 
 * After customer deposits money into merchant’s account, a payment transaction reference number is provided by the bank.   Customer needs to add this payment reference details with the respective order by going to order detail page.
 
      My Account -> Order no. -> Add details (Payment information column) -> Submit
-     
+
      ![Payment Info](https://s3.amazonaws.com/gems-and-extensions-screenshots/Bank+Transfer/checkout-1.png)
 
 * Admin will be able to see the payment reference details, added by customer, on the Order detail page.
 
        Orders -> Order no. ->  Payments
-       
+
        ![Payments](https://s3.amazonaws.com/gems-and-extensions-screenshots/Bank+Transfer/admin-payment.png)
 
 * The order will not be marked Completed  until admin captures the payment as mentioned in step above.
@@ -103,7 +103,7 @@ Testing
 
 Be sure to bundle your dependencies and then create a dummy test app for the specs to run against.
 
-```shell 
+```shell
 bundle
 bundle exec rake test_app
 bundle exec rspec spec
@@ -121,5 +121,5 @@ Credits
 -------
 
 [![vinsol.com: Ruby on Rails, iOS and Android developers](http://vinsol.com/vin_logo.png "Ruby on Rails, iOS and Android developers")](http://vinsol.com)
- 
+
 Copyright (c) 2014 [vinsol.com](http://vinsol.com "Ruby on Rails, iOS and Android developers"), released under the New MIT License

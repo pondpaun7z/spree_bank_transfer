@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Spree::PaymentMethod::BankTransfer do
+describe Spree::Gateway::BankTransfer do
   before(:each) do
     @order = Spree::Order.new
-    @payment_method = Spree::PaymentMethod::BankTransfer.create! name: "Bank Transfer", active: true
+    @payment_method = Spree::Gateway::BankTransfer.create! name: "Bank Transfer", active: true
     @payment = Spree::Payment.new amount: 0.0
     @payment.order = @order
     @payment.payment_method = @payment_method
