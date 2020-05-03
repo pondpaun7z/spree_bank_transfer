@@ -15,15 +15,18 @@ Gem::Specification.new do |s|
   s.email     = 'pppangpondpp7@gmail.com'
   s.homepage  = 'https://pondpaun.sevenz.info'
   s.license   = "MIT"
-  s.files       = `git ls-files`.split("\n")
-  #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
+
+  s.files        = `git ls-files`.split("\n")
+  s.test_files   = `git ls-files -- spec/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
   spree_version =  '>= 3.1.0', '< 5.0'
   s.add_dependency 'spree_core', spree_version
-
-  s.add_runtime_dependency "spree"
+  s.add_dependency 'spree_backend', spree_version
+  s.add_dependency 'spree_frontend', spree_version
+  s.add_dependency 'spree_extension'
+  s.add_dependency 'deface', '~> 1.0'
 
   s.add_development_dependency "bundler"
   s.add_development_dependency "rake"
