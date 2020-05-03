@@ -5,7 +5,7 @@ require 'spree_bank_transfer/version'
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree-bank-transfer'
+  s.name        = 'spree_bank_transfer'
   s.version     = '4.1.0'
   s.summary     = 'Spree extension to create bank transfer payment method.'
   s.description = 'This Spree extension allows admin to provide bank transfer payment method to its users.'
@@ -30,6 +30,8 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "bundler"
   s.add_development_dependency "rake"
+  s.add_development_dependency 'sass-rails'
+  s.add_development_dependency 'coffee-rails'
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'mysql2'
   s.add_development_dependency 'pg'

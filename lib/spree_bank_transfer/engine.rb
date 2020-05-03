@@ -2,7 +2,7 @@ module SpreeBankTransfer
   class Engine < Rails::Engine
     require 'spree/core'
     isolate_namespace Spree
-    engine_name 'spree-bank-transfer'
+    engine_name 'spree_bank_transfer'
 
     # use rspec for tests
     config.generators do |g|
@@ -17,7 +17,7 @@ module SpreeBankTransfer
 
     config.to_prepare &method(:activate).to_proc
 
-    initializer "spree.spree-bank-transfer.payment_methods", after: "spree.register.payment_methods" do |app|
+    initializer "spree.spree_bank_transfer.payment_methods", after: "spree.register.payment_methods" do |app|
       app.config.spree.payment_methods << Spree::Gateway::BankTransfer
     end
   end
