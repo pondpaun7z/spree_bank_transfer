@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'spree/bank_tranfer/version'
+require 'spree/bank_transfer/version'
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.version     = '4.1.0'
   s.summary     = 'Spree extension to create bank transfer payment method.'
   s.description = 'This Spree extension allows admin to provide bank transfer payment method to its users.'
+  s.required_ruby_version = '>= 2.1.0'
 
   s.author    = 'Theeraphat Jantakat'
   s.email     = 'pppangpondpp7@gmail.com'
