@@ -22,6 +22,9 @@ Gem::Specification.new do |s|
 
   spree_version =  '>= 3.1.0', '< 5.0'
   s.add_dependency 'spree_core', spree_version
+
+  s.add_runtime_dependency "spree"
+
   s.add_development_dependency "bundler"
   s.add_development_dependency "rake"
   s.add_development_dependency 'sqlite3'
