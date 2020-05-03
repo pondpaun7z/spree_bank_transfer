@@ -5,8 +5,8 @@ module Spree
 
       isolate_namespace Spree::BankTransfer
 
-      initializer "spree.bank-transfer.payment_methods", :after => "spree.register.payment_methods" do |app|
-        app.config.spree.payment_methods << Spree::PaymentMethod::BankTransfer
+      initializer "spree.gateway.payment_methods", :after => "spree.register.payment_methods" do |app|
+        app.config.spree.payment_methods << Spree::Gateway::BankTransfer
       end
     end
   end
