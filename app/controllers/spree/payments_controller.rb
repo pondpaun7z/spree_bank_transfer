@@ -18,7 +18,7 @@ module Spree
       @payment = if spree_current_user
         spree_current_user.payments.find_by(number: params[:id])
       else
-        Payment.joins(:order).find_by(number: params[:id], orders: {user_id: nil})
+        Payment.joins(:order).find_by(number: params[:id], spree_orders: {user_id: nil})
       end
 
       unless @payment
