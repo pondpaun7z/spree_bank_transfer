@@ -4,7 +4,7 @@
     <br>
     <%= link_to Spree.t(:add_details), "javascript:void(0);", class: 'button add_bt_details' %>
     <%= form_for bank_transfer_payment, html: { class: "bt_payment_form", style: "#{bank_transfer_payment.details_submitted? ? '' : 'display:none;'}" } do |f| %>
-      <div class="row mx-0">
+      <div class="row mx-0 my-3">
         <div class="form-group col-12 px-0">
           <%= f.label Spree.t(:deposited_on), class: 'mb-0' %>
           <%= f.text_field :deposited_on, disabled: bank_transfer_payment.details_submitted?, class: 'required_field form-control form-control-sm' %>

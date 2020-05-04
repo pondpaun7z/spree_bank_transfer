@@ -15,7 +15,12 @@ module Spree
     end
 
     def find_payment
-      @payment = spree_current_user.payments.find_by(number: params[:id])
+      @payment = if spree_current_user
+        spree_current_user.payments.find_by(number: params[:id])
+      else
+        Payment.joins(:order).find_by(number: params[:id], orders: {user_id: nil})
+      end
+
       unless @payment
         flash[:error] = Spree.t(:payment_not_found)
         redirect_back(fallback_location: root_path)
