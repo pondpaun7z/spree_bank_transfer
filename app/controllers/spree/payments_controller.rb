@@ -1,6 +1,7 @@
 module Spree
   class PaymentsController < Spree::StoreController
-    before_action :authenticate_spree_user!
+    ### Uncomment for not allow continue as Guest ###
+    # before_action :authenticate_spree_user!
     before_action :find_payment
 
     def update
