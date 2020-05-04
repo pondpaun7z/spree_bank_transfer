@@ -11,18 +11,7 @@ Installation
 
 ```ruby
 # Spree >= 3.1
-gem 'spree_bank_transfer', github: 'pondpaun7z/spree_bank_transfer'
-```
-
-For older versions of Spree.
-```ruby
-# Spree 2.1.0
-gem 'spree-bank-transfer', '2.1.0', require: 'spree_bank_transfer'
-```
-
-```ruby
-# Spree 2.0.x
-gem 'spree-bank-transfer', '2.0.5', require: 'spree_bank_transfer'
+gem 'spree_bank_transfer', github: 'pondpaun7z/spree_bank_transfer', branch: "4-1-stable"
 ```
 
 2. Install the gem using Bundler:
