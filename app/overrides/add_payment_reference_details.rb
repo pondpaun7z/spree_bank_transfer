@@ -23,7 +23,7 @@ Deface::Override.new(
               <td class='align-center'><%= bank_transfer_payment.bank_name %></td>
               <td class='align-center'><%= bank_transfer_payment.account_no %></td>
               <td class='align-center'><%= bank_transfer_payment.transaction_reference_no %></td>
-              <td class='align-center' width="150px"><%= image_tag url_for(bank_transfer_payment.receipt) %></td>
+              <td class='align-center' width="150px"><%= image_tag main_app.url_for(bank_transfer_payment.receipt) %></td>
             </tr>
           </tbody>
         </table>
