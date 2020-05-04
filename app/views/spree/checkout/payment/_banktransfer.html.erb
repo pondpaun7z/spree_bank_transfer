@@ -14,14 +14,13 @@
     <% end %>
   </table>
 
+  <div class="payment-payment_method">
+    <% param_prefix = "payment_source[#{payment_method.id}]" %>
 
-
-<div class="payment-payment_method">
-  <% param_prefix = "payment_source[#{payment_method.id}]" %>
-
-  <div class="payment-payment_method-fields">
-    <div class="mb-4 payment-payment_method-field checkout-content-inner-field">
-      <%= text_field_tag "#{param_prefix}[account_no]", class: 'required_field form-control', 'field-name' => 'Account No.' %>
+    <div class="payment-payment_method-fields">
+      <div class="mb-4 payment-payment_method-field checkout-content-inner-field">
+        <%= text_field_tag "#{param_prefix}[account_no]", class: 'required_field form-control', 'field-name' => 'Account No.' %>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
