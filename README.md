@@ -38,7 +38,7 @@ How it works:
 
    Configuration -> Payment Methods -> New payment Method
 
-   You need to select “Spree::Gateway::BankTransfer” as the Provider
+   You need to select “Spree::PaymentMethod::BankTransfer” as the Provider
 
       ![Bank Transfer - Payment Method](https://s3.amazonaws.com/gems-and-extensions-screenshots/Bank+Transfer/Bank-Transfer-Payment-Method.png)
 
