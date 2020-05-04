@@ -13,14 +13,4 @@
       </tr>
     <% end %>
   </table>
-
-  <div class="payment-payment_method">
-    <% param_prefix = "payment_source[#{payment_method.id}]" %>
-
-    <div class="payment-payment_method-fields row">
-      <div class="col-xl-12 mb-4 payment-payment_method-field checkout-content-inner-field">
-        <%= text_field_tag "#{param_prefix}[account_no]", nil, class: 'required_field form-control', placeholder: 'Account No.' %>
-      </div>
-    </div>
-  </div>
 <% end %>
