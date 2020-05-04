@@ -12,7 +12,7 @@
 
       <div class="col-xl-12 form-group">
         <%= f.label Spree.t(:bank_name) %>
-        <%= f.select :bank_name, options_for_select(Spree::Bank.all.map { |x| [x.name, x.id] }) disabled: bank_transfer_payment.details_submitted?, class: 'required_field form-control', 'field-name' => 'Bank name' %>
+        <%= f.select :bank_name, options_for_select(Spree::Bank.all.map { |x| [x.name, x.id] }), disabled: bank_transfer_payment.details_submitted?, class: 'required_field form-control', 'field-name' => 'Bank name' %>
       </div>
 
       <div class="col-xl-12 form-group">
