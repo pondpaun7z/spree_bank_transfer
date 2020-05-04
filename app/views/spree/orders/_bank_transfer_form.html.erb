@@ -29,10 +29,12 @@
     <% end %>
   <% else %>
     <div class="my-3">
-      <h5 class="text-success">แจ้งชำระเงินเรียบร้อยแล้ว</h5>
+      <p class="text-success font-weight-bold mb-0">
+        <i class="fas fa-check-circle"></i> <%= Spree.t(:bank_transfer_completed) %>
+      </p>
       <p class="mb-0"><%= Spree.t(:deposited_on) %>: <%= bank_transfer_payment.deposited_on.strftime("%d/%m/%Y") %></p>
       <p class="mb-0"><%= Spree.t(:bank_name) %>: <%= bank_transfer_payment.bank_name %></p>
-      <a href="<%= main_app.url_for(bank_transfer_payment.receipt) %>" target="_blank"><%= Spree.t(:receipt) %></a>
+      <a href="<%= main_app.url_for(bank_transfer_payment.receipt) %>" target="_blank"><%= Spree.t(:view_receipt) %></a>
     </div>
   <% end %>
 <% end %>
