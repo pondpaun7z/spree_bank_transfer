@@ -6,23 +6,23 @@
   <%= form_for bank_transfer_payment, html: { class: "bt_payment_form", style: "#{bank_transfer_payment.details_submitted? ? '' : 'display:none;'}" } do |f| %>
     <div class="row mx-0">
       <div class="form-group col-12">
-        <%= f.label Spree.t(:deposited_on) %>
-        <%= f.text_field :deposited_on, disabled: bank_transfer_payment.details_submitted?, class: 'required_field form-control', 'field-name' => 'Deposited on' %>
+        <%= f.label Spree.t(:deposited_on), class: 'mb-0' %>
+        <%= f.text_field :deposited_on, disabled: bank_transfer_payment.details_submitted?, class: 'required_field form-control form-control-sm' %>
       </div>
       <br>
       <div class="form-group col-12">
-        <%= f.label Spree.t(:bank_name) %>
-        <%= f.select :bank_name, options_for_select(Spree::Bank.pluck(:name)), disabled: bank_transfer_payment.details_submitted?, class: 'required_field form-control', 'field-name' => 'Bank name', class: 'form-control' %>
+        <%= f.label Spree.t(:bank_name), class: 'mb-0' %>
+        <%= f.select :bank_name, options_for_select(Spree::Bank.pluck(:name)), disabled: bank_transfer_payment.details_submitted?, class: 'required_field form-control form-control-sm' %>
       </div>
       <br>
       <div class="form-group col-12">
-        <%= f.label Spree.t(:receipt) %>
-        <%= f.file_field :receipt, disabled: bank_transfer_payment.details_submitted?, class: 'required_field form-control', 'field-name' => 'Receipt' %>
+        <%= f.label Spree.t(:receipt), class: 'mb-0' %>
+        <%= f.file_field :receipt, disabled: bank_transfer_payment.details_submitted?, class: 'required_field form-control-file' %>
       </div>
       <br>
-      <div class="form-group col-12">
+      <div class="col-12">
         <% unless bank_transfer_payment.details_submitted? %>
-          <%= f.submit "Submit", confirm: Spree.t(:confirm_details_submit), class: "btn btn-success btn-block" %>
+          <%= f.submit "Submit", confirm: Spree.t(:confirm_details_submit), class: "btn btn-success btn-block btn-sm" %>
         <% end %>
       </div>
     </div>
