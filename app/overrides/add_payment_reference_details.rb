@@ -11,19 +11,14 @@ Deface::Override.new(
             <tr data-hook="payments_header" class="table-active">
               <th><%= Spree.t(:deposited_on) %></th>
               <th><%= Spree.t(:bank_name) %></th>
-              <th><%= Spree.t(:account_no) %></th>
-              <th><%= Spree.t(:transaction_reference_no) %></th>
               <th><%= Spree.t(:receipt) %></th>
-              <th class="actions"></th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class='align-center'><%= bank_transfer_payment.deposited_on %></td>
               <td class='align-center'><%= bank_transfer_payment.bank_name %></td>
-              <td class='align-center'><%= bank_transfer_payment.account_no %></td>
-              <td class='align-center'><%= bank_transfer_payment.transaction_reference_no %></td>
-              <td class='align-center' width="150px"><%= image_tag main_app.url_for(bank_transfer_payment.receipt) %></td>
+              <td class='align-center' width="450px"><%= image_tag main_app.url_for(bank_transfer_payment.receipt), class: "w-100" %></td>
             </tr>
           </tbody>
         </table>
