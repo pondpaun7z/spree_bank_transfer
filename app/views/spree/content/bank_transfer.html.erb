@@ -1,11 +1,11 @@
-<div class="container">
-  <h1 class="text-center h2 mt-4">วิธีการชำระเงินโดยวิธี "โอนเงินผ่านธนาคาร"</h3>
+<div class="container mt-4">
+  <h1 class="text-center h2">วิธีการชำระเงินโดยวิธี "โอนเงินผ่านธนาคาร"</h3>
   <h4><strong>ขั้นตอนการแจ้งชำระเงิน:</strong></h4>
   <ol>
-    <li>ชำระเงินเต็มจำนวนตามบัญชีธนาคารข้างล่าง
+    <li>ชำระเงินเต็มจำนวนตามคำสั่งซื้อ ตามบัญชีธนาคารข้างล่าง
       <% if (banks = Spree::Bank.active).any? %>
-        <div>
-          <table class="table table-border">
+        <div class="w-50">
+          <table class="table table-bordered">
             <tr class="table-active">
               <th><%= Spree.t(:bank_name) %></th>
               <th><%= Spree.t(:account_no) %></th>

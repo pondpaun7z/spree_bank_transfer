@@ -4,7 +4,6 @@ Spree Bank Transfer [![Code Climate](https://codeclimate.com/github/vinsol/spree
 Spree Bank Transfer is an extension which allows adding a new payment method "Bank Transfer" to existing spree e-commerce store. With the help of this payment method customer can place an order online and pay by transferring money directly into merchant’s  Bank account.  This extension allow merchants to provide their bank account(s) details which in turn is used by customers to order and pay using this method. This extension also facilitate admin to Activate/Deactivate attached Bank accounts. Admin can also filter orders on the basis of the available payment transaction reference numbers with this extension.
 
 
-
 Installation
 ------------
 
@@ -13,10 +12,6 @@ Installation
 ```ruby
 # Spree >= 3.1
 gem 'spree_bank_transfer', github: 'pondpaun7z/spree_bank_transfer'
-```
-
-```ruby
-gem 'spree-bank-transfer', require: 'spree_bank_transfer'
 ```
 
 For older versions of Spree.
@@ -92,8 +87,6 @@ How it works:
 * Admin can filter orders which has payment transaction reference number by clicking the check box "only show orders with   bank transfer payment reference number" on "Orders" page.
 
   ![Orders](https://s3.amazonaws.com/gems-and-extensions-screenshots/Bank+Transfer/order-filter.png)
-
-
 
 
 
